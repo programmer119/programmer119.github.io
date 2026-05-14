@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoAFesta 후원 프로토타입</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="workspace">
+      <section class="phone-shell" aria-label="MoAFesta 앱 프로토타입">
+        <div class="status-bar">
+          <span>9:41</span>
+          <span>LTE 100%</span>
+        </div>
+
+        <header class="app-header">
+          <button class="icon-button" type="button" aria-label="알림">
+            <span class="bell-icon"></span>
+          </button>
+          <div>
+            <p class="eyebrow">Reward fandom IP platform</p>
+            <h1>MoAFesta</h1>
+          </div>
+          <button class="wallet-chip" type="button" data-screen="wallet">
+            <span class="heart-dot"></span>
+            <strong id="heartBalance">12,480</strong>
+          </button>
+        </header>
+
+        <nav class="tabs" aria-label="상단 메뉴">
+          <button class="tab active" type="button" data-screen="home">홈</button>
+          <button class="tab" type="button" data-screen="creators">크리에이터</button>
+          <button class="tab" type="button" data-screen="vote">투표</button>
+          <button class="tab" type="button" data-screen="shop">굿즈</button>
+        </nav>
+
+        <div class="screen active" id="home">
+          <section class="hero-feed">
+            <div>
+              <p class="label">오늘의 응원</p>
+              <h2>광고 리워드와 하트 후원이 함께 쌓이는 팬덤</h2>
+              <p>응원하기로 광고 보상을 받고, 하트 후원으로 크리에이터의 정산 가능 수익을 키웁니다.</p>
+            </div>
+            <button class="primary" type="button" data-open-support="루미파크">응원하기</button>
+          </section>
+
+          <section class="quick-grid" aria-label="빠른 실행">
+            <button type="button" data-screen="wallet">
+              <span>하트 충전</span>
+              <strong>PG 결제</strong>
+            </button>
+            <button type="button" data-open-support="코코프렌즈">
+              <span>바로 후원</span>
+              <strong>선물 메시지</strong>
+            </button>
+            <button type="button" data-screen="settlement">
+              <span>정산 센터</span>
+              <strong>Livewire 관리자</strong>
+            </button>
+          </section>
+
+          <section class="section-head">
+            <h3>추천 콘텐츠</h3>
+            <button type="button" data-screen="creators">전체보기</button>
+          </section>
+
+          <article class="content-card">
+            <div class="art-card art-lumi"></div>
+            <div class="content-body">
+              <div>
+                <p class="creator-name">루미파크</p>
+                <h4>달빛 상점의 캐릭터 굿즈 준비 노트</h4>
+              </div>
+              <div class="card-actions">
+                <span>좋아요 2.1k</span>
+                <button type="button" data-open-support="루미파크">하트 후원</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <div class="art-card art-coco"></div>
+            <div class="content-body">
+              <div>
+                <p class="creator-name">코코프렌즈</p>
+                <h4>신규 이모티콘 인기투표 후보 공개</h4>
+              </div>
+              <div class="card-actions">
+                <span>댓글 348</span>
+                <button type="button" data-open-support="코코프렌즈">하트 후원</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="screen" id="creators">
+          <section class="profile-hero">
+            <div class="profile-cover"></div>
+            <div class="profile-main">
+              <div class="avatar avatar-lumi"></div>
+              <div>
+                <p class="creator-name">Public Creator Profile</p>
+                <h2>루미파크</h2>
+                <p>웹툰, 캐릭터, 굿즈 제작을 함께 키우는 일러스트 크리에이터</p>
+              </div>
+            </div>
+            <div class="profile-stats">
+              <div><strong>38.2k</strong><span>팔로워</span></div>
+              <div><strong>Gold</strong><span>등급</span></div>
+              <div><strong>72%</strong><span>정산율</span></div>
+            </div>
+            <div class="profile-actions">
+              <button class="secondary" type="button">팔로우</button>
+              <button class="primary" type="button" data-open-support="루미파크">하트 후원</button>
+            </div>
+          </section>
+
+          <section class="creator-panels">
+            <article>
+              <span class="mini-label">작품</span>
+              <h3>달빛 상점</h3>
+              <p>캐릭터 14종, 쇼폼 28개, 굿즈 6종</p>
+            </article>
+            <article>
+              <span class="mini-label">팬 활동</span>
+              <h3>응원 18,492회</h3>
+              <p>이번 달 광고 응원 수익 1,284,000원</p>
+            </article>
+            <article>
+              <span class="mini-label">이벤트</span>
+              <h3>팝업 콜라보 후보</h3>
+              <p>인기투표 TOP 3 진입 시 제작 지원금 지급</p>
+            </article>
+          </section>
+        </div>
+
+        <div class="screen" id="vote">
+          <section class="section-head">
+            <h3>월간 인기투표</h3>
+            <button type="button">내 투표권 8</button>
+          </section>
+          <div class="ranking-list">
+            <article>
+              <strong>1</strong>
+              <div class="avatar avatar-lumi"></div>
+              <div><h4>루미파크</h4><p>굿즈 제작 지원 후보</p></div>
+              <button type="button">투표</button>
+            </article>
+            <article>
+              <strong>2</strong>
+              <div class="avatar avatar-coco"></div>
+              <div><h4>코코프렌즈</h4><p>이모티콘 캠페인 후보</p></div>
+              <button type="button">투표</button>
+            </article>
+            <article>
+              <strong>3</strong>
+              <div class="avatar avatar-mint"></div>
+              <div><h4>민트스튜디오</h4><p>오프라인 전시 후보</p></div>
+              <button type="button">투표</button>
+            </article>
+          </div>
+        </div>
+
+        <div class="screen" id="shop">
+          <section class="section-head">
+            <h3>굿즈 & 이벤트</h3>
+            <button type="button">콘 4,200</button>
+          </section>
+          <div class="goods-grid">
+            <article>
+              <div class="goods-art goods-a"></div>
+              <h4>달빛 키링 세트</h4>
+              <p>하트 후원자 선공개</p>
+              <button type="button">구매하기</button>
+            </article>
+            <article>
+              <div class="goods-art goods-b"></div>
+              <h4>팝업 응모권</h4>
+              <p>광고 리워드 콘 사용</p>
+              <button type="button">응모하기</button>
+            </article>
+          </div>
+        </div>
+
+        <div class="screen" id="wallet">
+          <section class="wallet-panel">
+            <p class="label">나의 하트</p>
+            <h2><span id="walletBalance">12,480</span> Heart</h2>
+            <p>하트는 인앱 결제로 충전하고, 크리에이터에게 직접 후원할 수 있는 유료 포인트입니다.</p>
+          </section>
+          <section class="package-list" aria-label="하트 충전 패키지">
+            <button type="button" data-charge="1000" data-price="1100"><strong>1,000</strong><span>1,100원</span></button>
+            <button type="button" data-charge="5500" data-price="5500"><strong>5,500</strong><span>5,500원</span></button>
+            <button type="button" data-charge="12000" data-price="11000"><strong>12,000</strong><span>11,000원</span></button>
+          </section>
+          <section class="history-list">
+            <h3>최근 내역</h3>
+            <article><span>충전</span><strong>+5,500</strong><small>카카오페이 승인</small></article>
+            <article><span>후원</span><strong>-1,000</strong><small>루미파크에게 메시지 전송</small></article>
+            <article><span>환불</span><strong>-3,000</strong><small>미사용 하트 환불 접수</small></article>
+          </section>
+        </div>
+
+        <div class="screen" id="settlement">
+          <section class="section-head">
+            <h3>크리에이터 정산</h3>
+            <button type="button">관리자 검수</button>
+          </section>
+          <div class="settlement-card">
+            <p class="label">정산 가능 금액</p>
+            <h2>1,428,800원</h2>
+            <div class="progress"><span></span></div>
+            <p>Gold 등급 정산율 72% 적용, 환불 대기분 84,000원 제외</p>
+          </div>
+          <div class="admin-table">
+            <article><span>후원 수익</span><strong>1,620,000원</strong><small>승인</small></article>
+            <article><span>광고 응원</span><strong>284,000원</strong><small>승인</small></article>
+            <article><span>환불 보류</span><strong>84,000원</strong><small>검수중</small></article>
+            <article><span>지급 요청</span><strong>1,428,800원</strong><small>대기</small></article>
+          </div>
+        </div>
+
+        <nav class="bottom-nav" aria-label="하단 메뉴">
+          <button class="active" type="button" data-screen="home">피드</button>
+          <button type="button" data-screen="vote">투표</button>
+          <button type="button" data-screen="wallet">하트</button>
+          <button type="button" data-screen="settlement">정산</button>
+        </nav>
+      </section>
+
+      <aside class="feature-panel">
+        <p class="eyebrow">Prototype scope</p>
+        <h2>모아페스타 후원 고도화</h2>
+        <p>
+          기존 보상형 팬덤 구조 위에 유료 하트, 크리에이터 직접 후원, PG 결제, 환불/정산 관리,
+          관리자 검수 흐름을 얹은 투자·제안용 클릭 프로토타입입니다.
+        </p>
+        <div class="flow-list">
+          <article>
+            <span>01</span>
+            <div><strong>충전</strong><p>하트 패키지 선택 후 결제 승인 상태를 즉시 반영합니다.</p></div>
+          </article>
+          <article>
+            <span>02</span>
+            <div><strong>후원</strong><p>크리에이터 프로필과 피드에서 메시지형 후원을 실행합니다.</p></div>
+          </article>
+          <article>
+            <span>03</span>
+            <div><strong>정산</strong><p>등급별 배분율, 환불 보류액, 지급 요청 상태를 분리합니다.</p></div>
+          </article>
+        </div>
+        <div class="toast-log" id="toastLog">프로토타입 준비 완료</div>
+      </aside>
+    </main>
+
+    <dialog class="support-modal" id="supportModal">
+      <form method="dialog">
+        <button class="close-button" type="submit" aria-label="닫기">×</button>
+      </form>
+      <p class="label">하트 후원</p>
+      <h2><span id="supportCreator">루미파크</span>에게 마음 보내기</h2>
+      <div class="amount-grid">
+        <button type="button" data-support="300">300</button>
+        <button type="button" data-support="1000">1,000</button>
+        <button type="button" data-support="3000">3,000</button>
+        <button type="button" data-support="5000">5,000</button>
+      </div>
+      <textarea id="supportMessage" maxlength="80">다음 굿즈도 기대하고 있어요.</textarea>
+      <button class="primary full" type="button" id="sendSupport">후원 보내기</button>
+      <p class="modal-note">후원 완료 후 미사용 유료 하트 기준 환불 정책과 크리에이터 정산 대기분이 자동 계산됩니다.</p>
+    </dialog>
+
+    <script src="./app.js"></script>
+    <script>
+      (() => {
+        if (window.__moaPrototypeReady) return;
+
+        const state = { hearts: 12480, selectedSupport: 1000, creator: "루미파크" };
+        const formatNumber = (value) => new Intl.NumberFormat("ko-KR").format(value);
+        const screens = [...document.querySelectorAll(".screen")];
+        const tabs = [...document.querySelectorAll(".tab")];
+        const bottomButtons = [...document.querySelectorAll(".bottom-nav button")];
+        const supportModal = document.querySelector("#supportModal");
+        const supportCreator = document.querySelector("#supportCreator");
+        const toastLog = document.querySelector("#toastLog");
+        const heartBalance = document.querySelector("#heartBalance");
+        const walletBalance = document.querySelector("#walletBalance");
+
+        const updateBalances = () => {
+          heartBalance.textContent = formatNumber(state.hearts);
+          walletBalance.textContent = formatNumber(state.hearts);
+        };
+
+        const showToast = (message) => {
+          toastLog.textContent = message;
+        };
+
+        const setScreen = (screenId) => {
+          screens.forEach((screen) => screen.classList.toggle("active", screen.id === screenId));
+          tabs.forEach((button) => button.classList.toggle("active", button.dataset.screen === screenId));
+          bottomButtons.forEach((button) => button.classList.toggle("active", button.dataset.screen === screenId));
+          showToast(`${screenId} 화면으로 이동했습니다.`);
+        };
+
+        const openSupport = (creatorName) => {
+          state.creator = creatorName;
+          supportCreator.textContent = creatorName;
+          document.querySelectorAll("[data-support]").forEach((button) => {
+            button.classList.toggle("selected", Number(button.dataset.support) === state.selectedSupport);
+          });
+          if (supportModal.showModal) {
+            supportModal.showModal();
+          } else {
+            supportModal.setAttribute("open", "");
+          }
+        };
+
+        document.querySelectorAll("[data-screen]").forEach((button) => {
+          button.addEventListener("click", () => setScreen(button.dataset.screen));
+        });
+
+        document.querySelectorAll("[data-open-support]").forEach((button) => {
+          button.addEventListener("click", () => openSupport(button.dataset.openSupport));
+        });
+
+        document.querySelectorAll("[data-charge]").forEach((button) => {
+          button.addEventListener("click", () => {
+            const amount = Number(button.dataset.charge);
+            const price = Number(button.dataset.price);
+            state.hearts += amount;
+            updateBalances();
+            showToast(`${formatNumber(price)}원 결제 승인: 하트 ${formatNumber(amount)}개가 충전되었습니다.`);
+          });
+        });
+
+        document.querySelectorAll("[data-support]").forEach((button) => {
+          button.addEventListener("click", () => {
+            state.selectedSupport = Number(button.dataset.support);
+            document.querySelectorAll("[data-support]").forEach((target) => target.classList.remove("selected"));
+            button.classList.add("selected");
+          });
+        });
+
+        document.querySelector("#sendSupport").addEventListener("click", () => {
+          if (state.hearts < state.selectedSupport) {
+            showToast("하트 잔액이 부족합니다. 충전 화면에서 먼저 충전해 주세요.");
+            supportModal.close ? supportModal.close() : supportModal.removeAttribute("open");
+            setScreen("wallet");
+            return;
+          }
+
+          state.hearts -= state.selectedSupport;
+          updateBalances();
+          supportModal.close ? supportModal.close() : supportModal.removeAttribute("open");
+          showToast(`${state.creator}에게 하트 ${formatNumber(state.selectedSupport)}개 후원이 완료되었습니다.`);
+        });
+
+        document.querySelectorAll(".ranking-list button").forEach((button) => {
+          button.addEventListener("click", () => showToast("투표권 1장이 사용되었습니다."));
+        });
+
+        document.querySelectorAll(".goods-grid button").forEach((button) => {
+          button.addEventListener("click", () => showToast(`${button.textContent} 요청이 접수되었습니다.`));
+        });
+
+        updateBalances();
+      })();
+    </script>
+  </body>
+</html>
