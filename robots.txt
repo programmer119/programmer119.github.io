@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://programmer119.github.io/nexacro/sitemap.xml
+Sitemap: https://programmer119.github.io/react-kiosk-dashboard/sitemap.xml
+Sitemap: https://programmer119.github.io/ai-saas-pc-stgnn-ai-1/sitemap.xml
+Sitemap: https://programmer119.github.io/jetpack-compose-ui-mcx-client-android/sitemap.xml
+Sitemap: https://programmer119.github.io/moafesta-prototype/sitemap.xml
+Sitemap: https://programmer119.github.io/python-react-saas-3-7-5/sitemap.xml
+Sitemap: https://programmer119.github.io/ivr-java-avaya-650-850-2026/sitemap.xml
+Sitemap: https://programmer119.github.io/lms-asap-12-7-x-5/sitemap.xml
+Sitemap: https://programmer119.github.io/palate-track-prototype-v2/sitemap.xml
+Sitemap: https://programmer119.github.io/1-crm-db-ga-2-2/sitemap.xml
+Sitemap: https://programmer119.github.io/flutter-flutter-2-2-3-5/sitemap.xml
+Sitemap: https://programmer119.github.io/25-1-ui-ux-client-windows/sitemap.xml
