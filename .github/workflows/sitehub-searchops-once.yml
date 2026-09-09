@@ -1,0 +1,41 @@
+name: SiteHub SearchOps p21 and shared robots once
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/sitehub-searchops-once.yml']
+permissions: {contents: write}
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: main}
+      - name: Apply pinned SearchOps adapter
+        env:
+          PROJECT_ID: p21
+          PUBLIC_URL: https://programmer119.github.io/moafesta-prototype/
+          PROJECT_NAME: 모아페스타 후원 고도화 Prototype
+          DESCRIPTION: 모아페스타의 후원 참여 흐름과 사용자 경험을 검증하기 위한 웹 프로토타입입니다.
+          INDEX_PATH: moafesta-prototype/index.html
+          SITEMAP_PATH: moafesta-prototype/sitemap.xml
+          ROOT_ROBOTS_PATH: robots.txt
+          ROOT_ROBOTS_SITEMAPS: |
+            https://programmer119.github.io/nexacro/sitemap.xml
+            https://programmer119.github.io/react-kiosk-dashboard/sitemap.xml
+            https://programmer119.github.io/ai-saas-pc-stgnn-ai-1/sitemap.xml
+            https://programmer119.github.io/jetpack-compose-ui-mcx-client-android/sitemap.xml
+            https://programmer119.github.io/moafesta-prototype/sitemap.xml
+            https://programmer119.github.io/python-react-saas-3-7-5/sitemap.xml
+            https://programmer119.github.io/ivr-java-avaya-650-850-2026/sitemap.xml
+            https://programmer119.github.io/lms-asap-12-7-x-5/sitemap.xml
+            https://programmer119.github.io/palate-track-prototype-v2/sitemap.xml
+            https://programmer119.github.io/1-crm-db-ga-2-2/sitemap.xml
+            https://programmer119.github.io/flutter-flutter-2-2-3-5/sitemap.xml
+            https://programmer119.github.io/25-1-ui-ux-client-windows/sitemap.xml
+        run: |
+          set -Eeuo pipefail
+          curl -fsSL https://raw.githubusercontent.com/suaveforge/sitehub-deploy/949cbc636e900cbd3504c4a4ecfcc295511c6d70/searchops/static-page-adapter.py -o /tmp/sitehub-searchops.py
+          python /tmp/sitehub-searchops.py
+          git config user.name 'SuaveForge SiteHub'; git config user.email '53187583+programmer119@users.noreply.github.com'
+          git add moafesta-prototype/index.html moafesta-prototype/sitemap.xml robots.txt
+          if ! git diff --cached --quiet; then git commit -m 'Apply SiteHub SearchOps p21 and shared robots'; git push origin HEAD:main; fi
